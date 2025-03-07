@@ -1,0 +1,62 @@
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+
+.container-about{
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.container-about h3{
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.container-about .btn2{
+    background: #086d79;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+}
+
+.aboutImg{
+    width: 500px;
+    height: auto;
+    border: 1px soild transparent;
+    border-radius: 10px;
+}
+
+  .about .heading {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .about p {
+    font-size: 15px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+    line-height: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .about .container {
+      flex-direction: column;
+    }
+    .about p {
+      padding: 0;
+    }
+    .about .container img {
+      margin-top: 50px;
+    }
+  }

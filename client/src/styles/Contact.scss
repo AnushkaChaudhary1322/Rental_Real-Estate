@@ -1,0 +1,189 @@
+.container-form form div {
+    display: flex;
+  }
+
+  .container-form h3{
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .container-form h4{
+    margin-left: 10px;
+    font-family: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .container-form textarea {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.668);
+  }
+  .container-form input {
+    margin-bottom: 20px;
+    margin-right: 10px;
+    width: 40%;
+    padding: 10px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.668);
+  }
+  .container-form form {
+    margin: 100px;
+    padding: 50px;
+    box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.2);
+    background: url('https://images.unsplash.com/photo-1454117096348-e4abbeba002c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+  }
+  .container-form button{
+    width: 130px;
+    height: 40px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: #076e7a;
+    color: #fff;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container-form h4 {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .container-form form div {
+      flex-direction: column;
+    }
+    .container-form input {
+      width: 100%;
+    }
+    .container-team {
+      margin: 0px;
+    }
+  }
+
+
+  // .container-team{
+  //   display: grid;
+  //   grid-template-columns: repeat(3,1fr);
+  //   grid-template-rows: auto;
+    
+  //   gap: 10px;
+  // }
+
+  // .container-team .box {
+  //   background: #ffffff;
+  //   border-radius: 6px;
+  //   border: 1px solid rgb(62 28 131 / 10%);
+  //   padding: 1.3rem;
+  //   width: 350px;
+  //   transition: 0.5s;
+  //   background: red;
+  // }
+
+    .Our-team{
+      margin-left: 150px;
+      margin-bottom: 50px;
+      margin-bottom: 20px;
+      font-size: 40px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+  .container-team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px; 
+    justify-content: center;
+    align-items: center;
+    margin-inline: 100px;
+  }
+  
+  .container-team .box {
+    background: #ffffff;
+    border-radius: 6px;
+    border: 1px solid rgba(62, 28, 131, 0.1);
+    padding: 1.3rem;
+    transition: 0.5s;
+    min-width: 300px; 
+    flex: 0 0 auto; 
+  }
+  
+  .container-team .box:hover {
+    box-shadow: 0 0 20px 0 rgb(112 121 138 / 18%);
+    cursor: pointer;
+  }
+  .container-team .details {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .container-team .img {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    position: relative;
+  }
+  .container-team img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
+  .container-team .img i {
+    color: #10e758;
+    font-size: 17px;
+    position: absolute;
+    top: 35px;
+    right: -10px;
+  }
+  .container-team .img::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 110px;
+    height: 110px;
+    border: 5px solid #edf0f5;
+    border-radius: 50%;
+  }
+  .container-team label {
+    display: inline-block;
+    margin-top: 20px;
+  }
+  .container-team i {
+    color: grey;
+    margin-right: 5px;
+  }
+  .container-team ul {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  .container-team ul li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    align-items: center;
+    background-color: #f4f5f7;
+    border-radius: 50%;
+    margin: 5px;
+  }
+  .container-team .button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .container-team .button i {
+    color: white;
+    font-size: 20px;
+  }
+
+.container-team button{
+  width: 100px;
+  height: 50px;
+  background: #0a7986;
+  border-radius:50% ;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}

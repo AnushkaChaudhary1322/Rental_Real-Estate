@@ -4,11 +4,12 @@
 
 
 .category-list {
+  transform: scale(0.95);
   padding: 50px 80px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 40px;
 
   @include sm {
     padding: 50px 20px;

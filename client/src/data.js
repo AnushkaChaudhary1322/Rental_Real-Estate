@@ -57,13 +57,13 @@ export const categories = [
     description: "This property is has windmills!",
   },
   {
-    img: "assets/modern_cat.webp",
+    img: "assets/login.jpg",
     label: "Iconic cities",
     icon: <MdOutlineVilla />,
     description: "This property is modern!",
   },
   {
-    img: "assets/countryside_cat.webp",
+    img: "assets/desert_cat.webp",
     label: "Countryside",
     icon: <TbMountain />,
     description: "This property is in the countryside!",

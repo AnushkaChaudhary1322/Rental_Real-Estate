@@ -66,22 +66,8 @@ const ListingCard = ({
   };
 
   /* RANDOM LABEL */
-  const [label, setLabel] = useState("");
-
-  useEffect(() => {
-    const labels = ["For Sale", "For Rent"];
-    setLabel(labels[Math.floor(Math.random() * labels.length)]);
-  }, []);
 
   /* Conditional Background Color */
-  const labelStyle = {
-    backgroundColor: label === "For Sale" ? "lightgreen" : "lightcoral",
-    padding: "5px",
-    borderRadius: "5px",
-    color: "white",
-    textAlign: "center",
-    width: "100px",
-  };
 
   return (
     <div
@@ -123,7 +109,7 @@ const ListingCard = ({
           ))}
         </div>
       </div>
-      <div className="random" style={labelStyle}>{label}</div>
+      {/* <div className="random" style={labelStyle}>{label}</div> */}
       <h3>
         {city}, {province}, {country}
       </h3>

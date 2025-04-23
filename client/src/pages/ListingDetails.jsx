@@ -65,31 +65,60 @@ const ListingDetails = () => {
   const navigate = useNavigate()
 
   const handleSubmit = async () => {
-    try {
-      const bookingForm = {
-        customerId,
-        listingId,
-        hostId: listing.creator._id,
-        startDate: dateRange[0].startDate.toDateString(),
-        endDate: dateRange[0].endDate.toDateString(),
-        totalPrice: listing.price * dayCount,
-      }
-
-      const response = await fetch("http://localhost:5000/bookings/create", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(bookingForm)
-      })
-
-      if (response.ok) {
-        navigate(`/${customerId}/trips`)
-      }
-    } catch (err) {
-      console.log("Submit Booking Failed.", err.message)
-    }
-  }
+    const totalPrice = listing.price * dayCount;
+  
+    const bookingForm = {
+      customerId,
+      listingId,
+      hostId: listing.creator._id,
+      startDate: dateRange[0].startDate.toDateString(),
+      endDate: dateRange[0].endDate.toDateString(),
+      totalPrice,
+    };
+  
+    const options = {
+      key: "rzp_test_uCkuHO2ACClXg4", // Replace with your real Razorpay test/live key
+      amount: totalPrice * 100, // in paise
+      currency: "INR",
+      name: listing.title,
+      description: `Booking at ${listing.city}`,
+      image: "https://yourapp.com/logo.png", // optional logo
+      handler: async function (response) {
+        try {
+          const bookingResponse = await fetch("http://localhost:5000/bookings/create", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(bookingForm),
+          });
+  
+          if (bookingResponse.ok) {
+            navigate(`/${customerId}/trips`);
+          } else {
+            console.error("Booking creation failed on server.");
+          }
+        } catch (err) {
+          console.log("Error creating booking after payment:", err.message);
+        }
+      },
+      prefill: {
+        name: "Your Name", 
+        email: "email@example.com",
+        contact: "9999999999",
+      },
+      notes: {
+        address: "Sample Booking Address",
+      },
+      theme: {
+        color: "#F37254",
+      },
+    };
+  
+    const rzp1 = new window.Razorpay(options);
+    rzp1.open();
+  };
+  
 
   return loading ? (
     <Loader />

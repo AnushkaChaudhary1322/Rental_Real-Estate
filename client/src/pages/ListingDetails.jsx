@@ -111,7 +111,7 @@ const ListingDetails = () => {
         address: "Sample Booking Address",
       },
       theme: {
-        color: "#F37254",
+        color: "#87CEEB",
       },
     };
   
@@ -193,7 +193,7 @@ const ListingDetails = () => {
           <div>
             <h2>How long do you want to stay?</h2>
             <div className="date-range-calendar">
-              <DateRange ranges={dateRange} onChange={handleSelect} />
+              <DateRange ranges={dateRange} onChange={handleSelect} minDate={new Date()} />
               {dayCount > 1 ? (
                 <h2>
                   ₹{listing.price} x {dayCount} nights
